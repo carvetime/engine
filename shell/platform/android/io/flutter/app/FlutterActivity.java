@@ -14,6 +14,7 @@ import io.flutter.app.FlutterActivityDelegate.ViewFactory;
 import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.view.FlutterNativeView;
 import io.flutter.view.FlutterView;
+import android.widget.Toast;
 
 /**
  * Deprecated base class for activities that use Flutter.
@@ -100,6 +101,7 @@ public class FlutterActivity extends Activity
   @Override
   protected void onResume() {
     super.onResume();
+    android.widget.Toast.makeText(getApplicationContext(), "123", Toast.LENGTH_LONG).show();
     eventDelegate.onResume();
   }
 
